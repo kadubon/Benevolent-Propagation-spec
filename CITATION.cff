@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "A Pure Natural Theory of Benevolent Propagation (Static Spec v0.1)"
+authors:
+  - family-names: Takahashi
+    given-names: K.
+date-released: 2025-09-17
+doi: 10.5281/zenodo.xxxxxxx
+abstract: >
+  A pure, implementation-free specification under no-meta closure:
+  four measurable floors (ε, L₀, D_min, λ_min), order-only objective (CMI),
+  Fisher–KPP speed floor, directional lower bounds with Wulff-type shape,
+  and coarse-graining monotonicity. Static, fork-and-go.
+preferred-citation:
+  type: article
+  title: "A Pure Natural Theory of Benevolent Propagation under No-Meta Closure (Research Note)"
+  authors:
+    - family-names: Takahashi
+      given-names: K.
+  doi: 10.5281/zenodo.17136050

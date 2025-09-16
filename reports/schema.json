@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Benevolent Propagation Report",
+  "type": "object",
+  "required": ["title", "alpha", "floors", "front_speed", "reproducibility"],
+  "properties": {
+    "title": {"type": "string"},
+    "dataset_or_medium": {"type": "string"},
+    "alpha": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+    "floors": {
+      "type": "object",
+      "required": ["epsilon", "L0", "D_min", "lambda_min"],
+      "properties": {
+        "epsilon": {
+          "type": "object",
+          "required": ["estimate"],
+          "properties": {
+            "estimate": {"type": "number", "minimum": 0},
+            "ci": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+            "method": {"type": "string"}
+          }
+        },
+        "L0": {
+          "type": "object",
+          "required": ["estimate"],
+          "properties": {
+            "estimate": {"type": "number", "minimum": 0, "maximum": 1},
+            "ci": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+            "method": {"type": "string"}
+          }
+        },
+        "D_min": {
+          "type": "object",
+          "required": ["estimate"],
+          "properties": {
+            "estimate": {"type": "number", "minimum": 0},
+            "ci": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+            "method": {"type": "string"}
+          }
+        },
+        "lambda_min": {
+          "type": "object",
+          "required": ["estimate"],
+          "properties": {
+            "estimate": {"type": "number", "minimum": 0},
+            "ci": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+            "method": {"type": "string"}
+          }
+        }
+      }
+    },
+    "front_speed": {
+      "type": "object",
+      "required": ["v_star_obs"],
+      "properties": {
+        "v_star_obs": {"type": "number", "minimum": 0},
+        "ci": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+        "method": {"type": "string"}
+      }
+    },
+    "directional": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["u", "v_star_u"],
+        "properties": {
+          "u": {"type": "string"},
+          "v_star_u": {"type": "number", "minimum": 0},
+          "Lambda_plus": {"type": "number", "minimum": 0}
+        }
+      }
+    },
+    "coarse_graining": {
+      "type": "object",
+      "properties": {
+        "type": {"type": "string", "enum": ["symmetric", "other"]},
+        "details": {"type": "string"}
+      }
+    },
+    "refuters": {
+      "type": "object",
+      "properties": {
+        "R1": {"type": "boolean"},
+        "R2": {"type": "boolean"},
+        "R3": {"type": "boolean"}
+      }
+    },
+    "reproducibility": {
+      "type": "object",
+      "required": ["code_url", "seed"],
+      "properties": {
+        "code_url": {"type": "string"},
+        "seed": {"type": "integer"}
+      }
+    },
+    "notes": {"type": "string"}
+  }
+}

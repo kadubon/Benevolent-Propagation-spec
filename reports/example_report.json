@@ -1,0 +1,20 @@
+{
+  "title": "T1: 2D striped KPP – run A",
+  "dataset_or_medium": "Striped-KPP(σ=0.3, period=16)",
+  "alpha": 0.5,
+  "floors": {
+    "epsilon": {"estimate": 0.08, "ci": [0.05, 0.11], "method": "Nummelin minorization"},
+    "L0": {"estimate": 0.17, "ci": [0.12, 0.22], "method": "SDPI via injected nuisance N"},
+    "D_min": {"estimate": 0.42, "ci": [0.38, 0.45], "method": "spectral gap lower bound"},
+    "lambda_min": {"estimate": 0.21, "ci": [0.19, 0.24], "method": "zero-density linear fit"}
+  },
+  "front_speed": {"v_star_obs": 0.56, "ci": [0.52, 0.60], "method": "α-level regression"},
+  "directional": [
+    {"u": "x+", "v_star_u": 0.58, "Lambda_plus": 0.03},
+    {"u": "y+", "v_star_u": 0.54, "Lambda_plus": 0.05}
+  ],
+  "coarse_graining": {"type": "symmetric", "details": "lazy random-walk blurring (p=0.1)"},
+  "refuters": {"R1": false, "R2": false, "R3": false},
+  "reproducibility": {"code_url": "https://example.com/your-fork", "seed": 1337},
+  "notes": "Matches v_* ≥ 2√(D_min λ_min) within CI."
+}
