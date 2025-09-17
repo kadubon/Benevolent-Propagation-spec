@@ -1,4 +1,6 @@
 # A Pure Natural Theory of Benevolent Propagation (Static Spec v0.1)
+[![Paper DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17136050.svg)](https://doi.org/10.5281/zenodo.17136050)
+[![Repo DOI (concept)](https://zenodo.org/badge/DOI/10.5281/zenodo.17138320.svg)](https://doi.org/10.5281/zenodo.17138320)
 
 **Status:** Static, implementation-free. No Q&A, no issue triage. Fork-and-go.
 
